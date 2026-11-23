@@ -1,0 +1,857 @@
+
+/* ============================================================================
+   PREFERRED — PREMIUM ANIMATED 404 PAGE
+============================================================================ */
+
+.not-found {
+  --nf-navy: var(--brand-navy, #172448);
+  --nf-orange: var(--accent-orange, #F07832);
+  --nf-yellow: var(--accent-champagne, #F6C94A);
+  --nf-royal-blue: var(--brand-blue, #3155D9);
+  --nf-red: #E94B4B;
+
+  --nf-character-face: #FFD9A8;
+  --nf-character-body: var(--nf-orange);
+  --nf-character-outline: #172448;
+
+  position: relative;
+  isolation: isolate;
+  min-height: calc(100vh - 80px);
+  min-height: calc(100svh - 80px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 65px 24px 75px;
+  color: var(--text-primary);
+  background:
+    radial-gradient(
+      circle at 50% 42%,
+      rgba(49, 85, 217, 0.10),
+      transparent 38%
+    ),
+    var(--bg-main);
+}
+
+/* ============================================================================
+   THEME COLORS
+============================================================================ */
+
+/* Dark mode */
+:root[data-theme="dark"] .not-found {
+  --nf-character-face: #FFD9A8;
+  --nf-character-body: #F07832;
+  --nf-character-outline: #172448;
+  --nf-royal-blue: #4777F5;
+
+  background:
+    radial-gradient(
+      circle at 50% 42%,
+      rgba(49, 85, 217, 0.19),
+      transparent 38%
+    ),
+    var(--bg-main);
+}
+
+/* Light mode */
+:root[data-theme="light"] .not-found {
+  --nf-character-face: #FFD9A8;
+  --nf-character-body: #F07832;
+  --nf-character-outline: #172448;
+  --nf-royal-blue: #3155D9;
+
+  background:
+    radial-gradient(
+      circle at 50% 42%,
+      rgba(49, 85, 217, 0.09),
+      transparent 38%
+    ),
+    #F5F8FF;
+}
+
+/* ============================================================================
+   BACKGROUND EFFECTS
+============================================================================ */
+
+.nf-background {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.nf-glow {
+  position: absolute;
+  display: block;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  filter: blur(95px);
+  opacity: 0.15;
+  animation: nf-glow-float 9s ease-in-out infinite alternate;
+}
+
+.nf-glow-blue {
+  top: 8%;
+  left: 8%;
+  background: var(--nf-royal-blue);
+}
+
+.nf-glow-orange {
+  right: 5%;
+  bottom: 8%;
+  background: var(--nf-orange);
+  animation-delay: -3s;
+}
+
+.nf-glow-yellow {
+  top: 35%;
+  right: 20%;
+  width: 180px;
+  height: 180px;
+  background: var(--nf-yellow);
+  opacity: 0.09;
+  animation-delay: -5s;
+}
+
+@keyframes nf-glow-float {
+  from {
+    transform: translate3d(0, 0, 0) scale(0.9);
+  }
+
+  to {
+    transform: translate3d(30px, -25px, 0) scale(1.2);
+  }
+}
+
+/* Floating background numbers */
+
+.nf-floating-number {
+  position: absolute;
+  color: var(--nf-royal-blue);
+  font-weight: 900;
+  line-height: 1;
+  opacity: 0.055;
+  user-select: none;
+  animation: nf-number-float 8s ease-in-out infinite;
+}
+
+.nf-number-one {
+  top: 12%;
+  right: 9%;
+  font-size: clamp(70px, 11vw, 150px);
+  transform: rotate(12deg);
+}
+
+.nf-number-two {
+  top: 18%;
+  left: 13%;
+  color: var(--nf-orange);
+  font-size: clamp(80px, 12vw, 160px);
+  animation-delay: -2s;
+}
+
+.nf-number-three {
+  right: 13%;
+  bottom: 10%;
+  font-size: clamp(55px, 8vw, 110px);
+  animation-delay: -4s;
+}
+
+@keyframes nf-number-float {
+  0%, 100% {
+    translate: 0 0;
+  }
+
+  50% {
+    translate: 0 -22px;
+  }
+}
+
+/* Decorative stars */
+
+.nf-star {
+  position: absolute;
+  color: var(--nf-yellow);
+  font-size: 27px;
+  animation: nf-star-twinkle 3s ease-in-out infinite;
+}
+
+.nf-star-one {
+  top: 20%;
+  left: 27%;
+}
+
+.nf-star-two {
+  top: 42%;
+  right: 12%;
+  color: var(--nf-orange);
+  animation-delay: -1s;
+}
+
+.nf-star-three {
+  bottom: 18%;
+  left: 18%;
+  animation-delay: -2s;
+}
+
+.nf-star-four {
+  top: 12%;
+  right: 35%;
+  color: var(--nf-royal-blue);
+  animation-delay: -1.5s;
+}
+
+@keyframes nf-star-twinkle {
+  0%, 100% {
+    opacity: 0.35;
+    transform: scale(0.8) rotate(0deg);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.3) rotate(35deg);
+  }
+}
+
+/* ============================================================================
+   MAIN CONTENT
+============================================================================ */
+
+.not-found-content {
+  position: relative;
+  z-index: 2;
+  width: min(100%, 900px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Top label */
+
+.nf-top-label {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  margin-bottom: 12px;
+  padding: 9px 16px;
+  border: 1px solid rgba(240, 120, 50, 0.25);
+  border-radius: 50px;
+  color: var(--nf-orange);
+  background: rgba(240, 120, 50, 0.07);
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 1.8px;
+}
+
+.nf-top-label svg {
+  color: var(--nf-yellow);
+  animation: nf-sparkle 2s ease-in-out infinite;
+}
+
+@keyframes nf-sparkle {
+  0%, 100% {
+    transform: rotate(0deg) scale(1);
+  }
+
+  50% {
+    transform: rotate(25deg) scale(1.25);
+  }
+}
+
+/* ============================================================================
+   404 ARTWORK
+============================================================================ */
+
+.not-found-art {
+  position: relative;
+  width: min(100%, 510px);
+  height: 330px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 5px;
+}
+
+.nf-number-shadow {
+  position: absolute;
+  inset: 50% auto auto 50%;
+  transform: translate(-50%, -50%);
+  color: var(--nf-royal-blue);
+  font-size: clamp(190px, 30vw, 320px);
+  font-weight: 1000;
+  line-height: 1;
+  letter-spacing: -15px;
+  opacity: 0.10;
+  user-select: none;
+  white-space: nowrap;
+  text-shadow: 0 12px 45px rgba(49, 85, 217, 0.12);
+}
+
+.nf-character-wrap {
+  position: relative;
+  z-index: 2;
+  width: 250px;
+  height: 270px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nf-character-aura {
+  position: absolute;
+  z-index: -1;
+  top: 45%;
+  left: 50%;
+  width: 190px;
+  height: 190px;
+  border-radius: 50%;
+  background: var(--nf-orange);
+  opacity: 0.11;
+  filter: blur(45px);
+  transform: translate(-50%, -50%);
+  animation: nf-aura-pulse 3s ease-in-out infinite;
+}
+
+@keyframes nf-aura-pulse {
+  0%, 100% {
+    transform: translate(-50%, -50%) scale(0.85);
+    opacity: 0.08;
+  }
+
+  50% {
+    transform: translate(-50%, -50%) scale(1.2);
+    opacity: 0.19;
+  }
+}
+
+.nf-character {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  filter: drop-shadow(0 15px 20px rgba(0, 0, 0, 0.12));
+}
+
+/* Character eyes */
+
+.nf-eyes {
+  transform-origin: center;
+  animation: nf-eye-look 5s ease-in-out infinite;
+}
+
+@keyframes nf-eye-look {
+  0%, 35%, 100% {
+    transform: translateX(0);
+  }
+
+  45%, 65% {
+    transform: translateX(5px);
+  }
+
+  75% {
+    transform: translateX(-4px);
+  }
+}
+
+/* Tears */
+
+.nf-tear {
+  transform-box: fill-box;
+  transform-origin: center top;
+  animation: nf-cry 1.8s ease-in infinite;
+}
+
+.nf-tear-right {
+  animation-delay: 0.9s;
+}
+
+@keyframes nf-cry {
+  0% {
+    opacity: 0;
+    transform: translateY(-4px) scale(0.7);
+  }
+
+  20% {
+    opacity: 1;
+  }
+
+  75% {
+    opacity: 0.9;
+    transform: translateY(22px) scale(0.9);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(34px) scale(0.5);
+  }
+}
+
+/* Question mark */
+
+.nf-question-mark {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: nf-question 2.5s ease-in-out infinite;
+}
+
+@keyframes nf-question {
+  0%, 100% {
+    transform: rotate(0deg) translateY(0);
+  }
+
+  50% {
+    transform: rotate(12deg) translateY(-7px);
+  }
+}
+
+/* Speech bubble */
+
+.nf-speech-bubble {
+  position: absolute;
+  top: 10px;
+  right: -30px;
+  z-index: 4;
+  padding: 11px 16px;
+  border: 2px solid var(--nf-yellow);
+  border-radius: 15px 15px 15px 3px;
+  color: var(--nf-navy);
+  background: var(--nf-yellow);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.10);
+  font-size: 12px;
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+.nf-speech-bubble::after {
+  content: "";
+  position: absolute;
+  bottom: -9px;
+  left: 15px;
+  width: 15px;
+  height: 15px;
+  border-bottom: 2px solid var(--nf-yellow);
+  border-left: 2px solid var(--nf-yellow);
+  background: var(--nf-yellow);
+  transform: skewY(-35deg);
+}
+
+/* ============================================================================
+   MESSAGE
+============================================================================ */
+
+.nf-message {
+  width: min(100%, 650px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nf-message .eyebrow {
+  margin-bottom: 14px;
+  color: var(--nf-orange);
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+.nf-message .eyebrow-dot {
+  background: var(--nf-yellow);
+  box-shadow: 0 0 12px rgba(246, 201, 74, 0.6);
+}
+
+.nf-message h1 {
+  margin: 0 0 15px;
+  color: var(--text-primary);
+  font-size: clamp(32px, 5vw, 52px);
+  font-weight: 900;
+  line-height: 1.25;
+}
+
+.nf-message h1 span {
+  color: var(--nf-orange);
+}
+
+.nf-description {
+  max-width: 540px;
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: clamp(14px, 1.5vw, 17px);
+  font-weight: 500;
+  line-height: 2;
+}
+
+.nf-secondary-message {
+  margin: 8px 0 0;
+  color: var(--nf-royal-blue);
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 1.8;
+}
+
+/* ============================================================================
+   HOME BUTTON
+============================================================================ */
+
+.nf-actions {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 28px;
+}
+
+.nf-home-button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-width: 220px;
+  min-height: 58px;
+  padding: 0 27px;
+  overflow: hidden;
+  border: 1px solid var(--nf-orange);
+  border-radius: 13px;
+  color: #FFFFFF;
+  background: var(--nf-orange);
+  box-shadow: 0 12px 30px rgba(240, 120, 50, 0.24);
+  font-size: 15px;
+  font-weight: 800;
+  text-decoration: none;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background 0.3s ease;
+}
+
+.nf-home-button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    110deg,
+    transparent 25%,
+    rgba(255, 255, 255, 0.25) 50%,
+    transparent 75%
+  );
+  transform: translateX(-120%);
+  transition: transform 0.65s ease;
+}
+
+.nf-home-button:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 38px rgba(240, 120, 50, 0.34);
+}
+
+.nf-home-button:hover::before {
+  transform: translateX(120%);
+}
+
+.nf-home-button > * {
+  position: relative;
+  z-index: 1;
+}
+
+.nf-button-arrow {
+  transition: transform 0.3s ease;
+}
+
+.nf-home-button:hover .nf-button-arrow {
+  transform: translateX(-5px);
+}
+
+[dir="rtl"] .nf-button-arrow {
+  transform: rotate(0deg);
+}
+
+[dir="ltr"] .nf-button-arrow {
+  transform: rotate(180deg);
+}
+
+[dir="ltr"] .nf-home-button:hover .nf-button-arrow {
+  transform: rotate(180deg) translateX(-5px);
+}
+
+/* ============================================================================
+   FOOTER NOTE — PREMIUM UPGRADE
+============================================================================ */
+
+.nf-footer-note {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 38px;
+  padding: 10px 22px;
+  color: var(--nf-orange);
+  font-size: clamp(19px, 2.1vw, 25px);
+  font-weight: 900;
+  line-height: 1.7;
+  letter-spacing: 0;
+  text-align: center;
+  opacity: 1;
+  text-shadow: 0 0 22px rgba(240, 120, 50, 0.16);
+  animation: nf-note-float 3.5s ease-in-out infinite;
+}
+
+.nf-footer-note::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 1px solid rgba(240, 120, 50, 0.16);
+  border-radius: 50px;
+  background: rgba(240, 120, 50, 0.045);
+  z-index: -1;
+}
+
+.nf-footer-note::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 75px;
+  height: 3px;
+  border-radius: 20px;
+  background: linear-gradient(
+    90deg,
+    var(--nf-royal-blue),
+    var(--nf-orange),
+    var(--nf-yellow)
+  );
+  box-shadow: 0 0 14px rgba(240, 120, 50, 0.3);
+  transform: translateX(-50%);
+}
+
+.nf-footer-line {
+  display: block;
+  width: 38px;
+  height: 3px;
+  flex-shrink: 0;
+  border-radius: 20px;
+  background: linear-gradient(
+    90deg,
+    var(--nf-royal-blue),
+    var(--nf-orange)
+  );
+  opacity: 0.9;
+}
+
+.nf-footer-line:last-child {
+  background: linear-gradient(
+    90deg,
+    var(--nf-orange),
+    var(--nf-yellow)
+  );
+}
+
+@keyframes nf-note-float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+/* ============================================================================
+   LIGHT MODE
+============================================================================ */
+
+:root[data-theme="light"] .nf-number-shadow {
+  opacity: 0.07;
+}
+
+:root[data-theme="light"] .nf-floating-number {
+  opacity: 0.065;
+}
+
+:root[data-theme="light"] .nf-character {
+  filter: drop-shadow(0 15px 20px rgba(23, 36, 72, 0.12));
+}
+
+:root[data-theme="light"] .nf-speech-bubble {
+  box-shadow: 0 8px 25px rgba(23, 36, 72, 0.12);
+}
+
+:root[data-theme="light"] .nf-footer-note::before {
+  background: rgba(240, 120, 50, 0.055);
+  border-color: rgba(240, 120, 50, 0.20);
+}
+
+/* ============================================================================
+   RTL SUPPORT
+============================================================================ */
+
+[dir="rtl"] .nf-top-label {
+  letter-spacing: 0.5px;
+}
+
+[dir="rtl"] .nf-message .eyebrow {
+  letter-spacing: 0.5px;
+}
+
+[dir="rtl"] .nf-footer-note {
+  letter-spacing: 0;
+}
+
+[dir="rtl"] .nf-speech-bubble {
+  right: auto;
+  left: -30px;
+  border-radius: 15px 15px 3px 15px;
+}
+
+[dir="rtl"] .nf-speech-bubble::after {
+  right: 15px;
+  left: auto;
+  border-right: 2px solid var(--nf-yellow);
+  border-left: 0;
+  transform: skewY(35deg);
+}
+
+/* ============================================================================
+   RESPONSIVE
+============================================================================ */
+
+@media (max-width: 800px) {
+  .not-found {
+    min-height: calc(100svh - 65px);
+    padding: 55px 22px 60px;
+  }
+
+  .not-found-art {
+    height: 295px;
+  }
+
+  .nf-character-wrap {
+    width: 225px;
+    height: 245px;
+  }
+
+  .nf-speech-bubble {
+    right: -18px;
+  }
+
+  [dir="rtl"] .nf-speech-bubble {
+    right: auto;
+    left: -18px;
+  }
+}
+
+@media (max-width: 560px) {
+  .not-found {
+    min-height: calc(100svh - 60px);
+    padding: 45px 18px 50px;
+  }
+
+  .nf-top-label {
+    margin-bottom: 5px;
+    padding: 8px 12px;
+    font-size: 8px;
+    letter-spacing: 1.2px;
+  }
+
+  .not-found-art {
+    height: 255px;
+    margin-bottom: 0;
+  }
+
+  .nf-number-shadow {
+    font-size: 195px;
+    letter-spacing: -10px;
+  }
+
+  .nf-character-wrap {
+    width: 195px;
+    height: 215px;
+  }
+
+  .nf-speech-bubble {
+    top: 8px;
+    right: -15px;
+    padding: 9px 12px;
+    font-size: 10px;
+  }
+
+  [dir="rtl"] .nf-speech-bubble {
+    right: auto;
+    left: -15px;
+  }
+
+  .nf-message h1 {
+    font-size: clamp(29px, 8vw, 38px);
+  }
+
+  .nf-description {
+    font-size: 13px;
+    line-height: 1.9;
+  }
+
+  .nf-secondary-message {
+    font-size: 12px;
+  }
+
+  .nf-home-button {
+    width: min(100%, 300px);
+    min-height: 54px;
+    font-size: 14px;
+  }
+
+  .nf-footer-note {
+    gap: 9px;
+    margin-top: 30px;
+    padding: 9px 14px;
+    font-size: clamp(16px, 4.5vw, 20px);
+    line-height: 1.6;
+  }
+
+  .nf-footer-line {
+    width: 20px;
+    height: 2px;
+  }
+
+  .nf-glow {
+    width: 190px;
+    height: 190px;
+    filter: blur(75px);
+  }
+
+  .nf-number-one {
+    top: 8%;
+    right: -5%;
+  }
+
+  .nf-number-two {
+    left: -8%;
+  }
+
+  .nf-number-three {
+    right: -5%;
+    bottom: 8%;
+  }
+}
+
+/* ============================================================================
+   ACCESSIBILITY — REDUCED MOTION
+============================================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  .nf-glow,
+  .nf-floating-number,
+  .nf-star,
+  .nf-top-label svg,
+  .nf-character-wrap,
+  .nf-character-aura,
+  .nf-eyes,
+  .nf-tear,
+  .nf-question-mark,
+  .nf-speech-bubble,
+  .nf-footer-note {
+    animation: none !important;
+    transition: none !important;
+  }
+}

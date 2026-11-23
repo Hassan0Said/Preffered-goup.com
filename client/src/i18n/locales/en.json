@@ -1,0 +1,207 @@
+{
+  "home": "Home",
+  "fleet": "Our Car Fleet",
+  "trips": "Tourist Trips",
+  "clients": "Our Clients",
+  "about": "About Us",
+  "contact": "Contact Us",
+  "switchTo": "العربية",
+  "dark": "Dark mode",
+  "light": "Light mode",
+  "menu": "Menu",
+  "close": "Close",
+  "eyebrow": "Premium mobility · Egypt",
+  "heroTitle": "Travel beyond limits.",
+  "heroText": "A considered way to move through Egypt — with refined vehicles, thoughtful hosts, and routes that stay with you.",
+  "exploreFleet": "Explore the fleet",
+  "planJourney": "Plan your journey",
+  "scroll": "Scroll to explore",
+  "trusted": "Trusted for the moments that matter",
+  "fleetEyebrow": "Move beautifully",
+  "fleetText": "From effortless airport transfers to full-day discoveries, choose the right space for every kind of journey.",
+  "details": "View details",
+  "quote": "Request a quote",
+  "seats": "seats",
+  "fuel": "Fuel",
+  "perDay": "from",
+  "egp": "EGP",
+  "tripsEyebrow": "See more of Egypt",
+  "tripsText": "Curated escapes, locally grounded and paced for real discovery.",
+  "tripsCtaEyebrow": "YOUR NEXT JOURNEY",
+  "tripsCtaTitle": "Let us shape a different route.",
+  "tripsCtaText": "Tell us what you would love to discover, and we will help create an experience around your time and interests.",
+  "tripsCtaButton": "Design your journey",
+  "learnMore": "Learn more",
+  "minutes": "minutes",
+  "aboutEyebrow": "The Preferred way",
+  "aboutTitle": "More than a ride. A better way to arrive.",
+  "aboutText": "Preferred pairs reliable transport with a warmer, more human view of travel. Every handover is calm, every detail intentional, and every route designed to give you more of Egypt.",
+  "ourStory": "Our story",
+  "stats": [
+    "Vehicles ready",
+    "Guests welcomed",
+    "Signature routes",
+    "Years of care"
+  ],
+  "clientsEyebrow": "Good company",
+  "clientsTitle": "Chosen by people who notice the details.",
+  "clientsText": "From family holidays to executive movements, our guests value the quiet confidence of a journey well handled.",
+  "contactEyebrow": "Let’s move",
+  "contactTitle": "Tell us where you want to go.",
+  "contactText": "Share a few details and our travel desk will come back with a considered plan.",
+  "name": "Your name",
+  "email": "Email address",
+  "phone": "Phone number",
+  "message": "Tell us about your journey",
+  "send": "Send enquiry",
+  "sent": "Your details were sent successfully.",
+  "requiredFields": "Please review the highlighted fields before sending.",
+  "connectText": "Choose a channel and we’ll help you take the next step.",
+  "whatsapp": "WhatsApp",
+  "instagram": "Instagram",
+  "tiktok": "TikTok",
+  "messenger": "Messenger",
+  "facebook": "Facebook",
+  "location": "Location",
+  "gmail": "Gmail",
+  "footerText": "Travel Beyond Limits. Thoughtful mobility and unforgettable routes across Egypt.",
+  "company": "Company",
+  "explore": "Explore",
+  "connect": "GET IN TOUCH",
+  "follow": "Follow along",
+  "rights": "© 2026 Preferred. All rights reserved.",
+  "pageNames": {
+    "/fleet": "Our Fleet",
+    "/trips": "Tourist Trips",
+    "/clients": "Our Clients",
+    "/about": "About Us",
+    "/contact": "Contact Us"
+  },
+  "routeFleet": "/ 01 — FLEET",
+  "routeTrips": "/ 02 — ROUTES",
+  "routeAbout": "/ 03 — ABOUT",
+  "routeContact": "/ 04 — CONTACT",
+  "lostRoute": "Preferred / Lost route",
+  "signature": "Travel Beyond Limits.",
+  "aboutHeadlineBefore": "Good journeys are",
+  "aboutHeadlineAccent": "felt",
+  "aboutHeadlineAfter": "before they’re remembered.",
+  "aboutBodySecond": "We take care of the pace, the welcome, the small decisions, and the details between destinations — so you can stay present for the places that brought you here.",
+  "clientTypes": [
+    "Global teams",
+    "Families",
+    "Concierge desks"
+  ],
+  "verifiedGuest": "Verified guest",
+  "journeyType": "Journey type",
+  "journeyOptions": [
+    "Fleet & transfers",
+    "Tourist trip",
+    "Corporate movement"
+  ],
+  "cairo": "Cairo · Giza · Aswan",
+  "notFound": "Page not found",
+  "notFoundText": "The route you were looking for has taken a different turn.",
+  "backHome": "Back to home",
+  "vehicle": {
+    "hiace": [
+      "Hiace",
+      "14",
+      "Diesel"
+    ],
+    "newHiace": [
+      "New Hiace",
+      "12",
+      "Diesel"
+    ],
+    "h1": [
+      "H1",
+      "8",
+      "Diesel"
+    ],
+    "corolla": [
+      "Corolla",
+      "4",
+      "Petrol"
+    ],
+    "sportage": [
+      "Sportage",
+      "4",
+      "Petrol"
+    ],
+    "coaster": [
+      "Coaster",
+      "28",
+      "Diesel"
+    ]
+  },
+  "trip": {
+    "museum": [
+      "Grand Egyptian Museum",
+      "A new icon for an ancient story.",
+      "Half day",
+      "Giza"
+    ],
+    "pyramids": [
+      "Pyramids at golden hour",
+      "A timeless horizon, seen at its quietest.",
+      "Full day",
+      "Cairo"
+    ],
+    "nubia": [
+      "Nubia, by the river",
+      "Colour, craft, and a slower rhythm in Aswan.",
+      "2 days",
+      "Aswan"
+    ]
+  },
+  "passengers": "passengers",
+  "namePlaceholder": "Enter your full name",
+  "emailPlaceholder": "name@example.com",
+  "phonePlaceholder": "11-digit mobile number",
+  "messagePlaceholder": "Tell us the important details",
+  "journeyPlaceholder": "Choose your service",
+  "nameRequired": "Please enter your name.",
+  "nameMin": "Your name must be at least 3 characters.",
+  "emailRequired": "Please enter your email address.",
+  "emailInvalid": "Enter a valid email address, such as name@example.com.",
+  "phoneRequired": "Please enter your phone number.",
+  "phoneLength": "Use exactly 11 digits for the phone number.",
+  "journeyRequired": "Choose a service from the list.",
+  "messageRequired": "Please add a message.",
+  "messageMin": "Your message must be at least 10 characters.",
+  "confirmEyebrow": "Review your request",
+  "confirmTitle": "Ready to send?",
+  "confirmBody": "Review the details below, then send the request or return to edit them.",
+  "confirmSend": "Send request",
+  "editData": "Edit details",
+  "servicesEyebrow": "Our services",
+  "servicesTitle": "A better way to move.",
+  "servicesText": "Corporate transport, private journeys, and considered travel experiences across Egypt.",
+  "services": [
+    [
+      "Corporate Transportation",
+      "Reliable movement for teams, guests, and important days."
+    ],
+    [
+      "Private Transportation",
+      "Quiet, comfortable journeys shaped around your schedule."
+    ],
+    [
+      "Tourist Trips",
+      "Curated routes through Egypt with room to discover."
+    ],
+    [
+      "Chauffeur Services",
+      "Professional support from the first pickup to the final arrival."
+    ]
+  ],
+  "fleetFiltersLabel": "Filter vehicles",
+  "fleetFilters": {
+    "all": "All Vehicles",
+    "sedans": "Sedans",
+    "suvs": "SUVs",
+    "vans": "Vans",
+    "coaches": "Coasters & Buses"
+  }
+}
