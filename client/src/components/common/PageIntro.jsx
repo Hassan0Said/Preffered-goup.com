@@ -8,6 +8,7 @@ export function PageIntro({
   accent = 'coral',
   className = '',
   image = '',
+  lang = 'en',
 }) {
   const isFleetHero = className.includes('fleet-page-intro');
 
@@ -20,7 +21,9 @@ export function PageIntro({
     >
       {isFleetHero ? (
         <div className="container-xl page-intro-inner fleet-hero-inner">
-          <h1>تحرّك بأناقة</h1>
+          <h1>
+            {lang === 'ar' ? 'تحرّك بأناقة' : 'Move in Style'}
+          </h1>
         </div>
       ) : (
         <div className="container-xl page-intro-inner">

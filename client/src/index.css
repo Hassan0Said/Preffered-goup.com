@@ -1889,6 +1889,8 @@ p {
 
 /* --- Base styles --- */
 /* Fleet page — hero heading */
+
+/* Fleet page — hero heading */
 .fleet-page-intro {
   background-position: center;
 }
@@ -1903,9 +1905,23 @@ p {
   margin: 0;
   max-width: none;
   text-align: right;
+  direction: rtl;
   text-shadow: 0 2px 14px rgba(0, 0, 0, 0.45);
   transform: translateY(-35px);
 }
+
+/* English — Left to Right */
+html[lang="en"] .fleet-page-intro .page-intro-inner h1 {
+  text-align: left;
+  direction: ltr;
+}
+
+/* Arabic — Right to Left */
+html[lang="ar"] .fleet-page-intro .page-intro-inner h1 {
+  text-align: right;
+  direction: rtl;
+}
+
 
 /* Fleet page — highlights */
 .fleet-highlights-section {
