@@ -239,11 +239,11 @@ const contactHero = '/assets/contact/contact-hero-section.png';
             </p>
 
             <div className="contact-list">
-              <a href="tel:+201000000000">
+              <a href="tel:+201211112423">
                 <span className="contact-list-icon">
                   <Phone size={19} />
                 </span>
-                <span>+20 100 000 0000</span>
+                <span dir='ltr'>+20 121 111 2423</span>
               </a>
 
               <a href="mailto:hello@preferred.eg">
@@ -253,12 +253,27 @@ const contactHero = '/assets/contact/contact-hero-section.png';
                 <span>hello@preferred.eg</span>
               </a>
 
-              <a href="#location">
-                <span className="contact-list-icon">
-                  <MapPin size={19} />
-                </span>
-                <span>{t.cairo}</span>
-              </a>
+<a
+  href="https://www.google.com/maps/search/?api=1&query=30.07561628235549,30.89614398015741"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <span className="contact-list-icon">
+    <MapPin size={19} />
+  </span>
+  <span>{t.cairo}</span>
+</a>
+
+<a
+  href="https://maps.app.goo.gl/q1tLbQ28bJ2UBaNDA"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <span className="contact-list-icon">
+    <MapPin size={19} />
+  </span>
+  <span>{t.coast}</span>
+</a>
             </div>
           </motion.aside>
 

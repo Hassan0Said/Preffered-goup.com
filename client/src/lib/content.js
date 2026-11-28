@@ -7,40 +7,63 @@ export const navItems = [
   ['/contact', 'contact'],
 ];
 
-export const homeFleetKeys = ['oldHiace', 'newHiace', 'h1', 'coaster', 'sportage', 'corolla'];
-
-export const fullFleetKeys = [
-  // الفانات (Vans)
+// Vehicles shown on the home page
+export const homeFleetKeys = [
+  // First row — Vans
   'oldHiace',
   'newHiace',
   'h1',
-  'v300',
 
-  // الأتوبيسات (Coaches)
+  // Second row — Buses
   'coaster',
   'mitsubishiBus',
+  'superJet',
 
-  // السيدان (Sedans)
+  // Third row — Sedans
+  'corolla',
+  'fortuner',
+  'mgG50',
+];
+
+
+export const fullFleetKeys = [
+  // Vans
+  'oldHiace',
+  'newHiace',
+  'h1',
+  'coaster',
+  'mitsubishiBus',
+  'superJet',
+  'v300',
+  'hyundaiStaria',
+
+
+  // SUVs — priority order requested
+  'mercedesGLC300',
+  'gClass',
+  'mercedesE200',
+  'mercedesS500',
+  'rangeRover',
+  'landCruiser',
+  'nissanPatrol',
+  'jeepGrand',
+  'mgG50',
+  'jetour',
+  'fortuner',
+  'tucson',
+  'newSportage',
+  'sportage',
+  'kiaGrand',
+  'tiggo7',
+  'eclipse',
+  'zs',
+
+  // Sedans — Mercedes first, then the remaining cars
   'corolla',
   'accent',
   'mg5',
-  'mercedesS',
   'elantra',
   'elantraMD',
-
-  // سيارات SUV
-  'sportage',
-  'newSportage',
-  'zs',
-  'jeepGrand',
-  'tiggo7',
-  'tucson',
-  'eclipse',
-  'fortuner',
-  'rangeRover',
-  'jetour',
-  'kiaGrand',
-
 ];
 
 export const tripKeys = ['museum', 'pyramids', 'nubia'];
@@ -75,54 +98,85 @@ export const destinationKeys = [
 
 export const fleetCatalog = {
   en: {
-    oldHiace: ['Toyota Hiace Classic', '14', 'Diesel', 'Toyota', '120 km/h'],
-    newHiace: ['Toyota Hiace New', '12', 'Diesel', 'Toyota', '130 km/h'],
+    // Vans
+    oldHiace: ['Toyota Hiace', '14', 'Diesel', 'Toyota', '120 km/h'],
+    newHiace: ['Toyota Hiace', '13', 'Diesel', 'Toyota', '130 km/h'],
     h1: ['Hyundai H1', '8', 'Diesel', 'Hyundai', '160 km/h'],
+    hyundaiStaria: ['Hyundai Staria', '7', 'Petrol', 'Hyundai', '180 km/h'],
     v300: ['Mercedes V300', '6', 'Petrol', 'Mercedes', '210 km/h'],
-    coaster: ['Toyota Coaster', '28', 'Diesel', 'Toyota', '110 km/h'],
-    mitsubishiBus: ['Mitsubishi Bus', '28', 'Diesel', 'Mitsubishi', '110 km/h'],
+
+    // Coaches
+    coaster: ['Toyota Coaster', '22', 'Diesel', 'Toyota', '110 km/h'],
+    mitsubishiBus: ['Minibus', '28', 'Diesel', 'Mitsubishi', '110 km/h'],
+    superJet: ['Bus Mercedes', '50', 'Diesel', 'SuperJet', '100 km/h'],
+
+    // SUVs
+    mercedesGLC300: ['Mercedes GLC 300', '4', 'Petrol', 'Mercedes', '230 km/h'],
+    gClass: ['Mercedes-Benz G-Class', '4', 'Petrol', 'Mercedes', '210 km/h'],
+    rangeRover: ['Range Rover', '4', 'Petrol', 'Land Rover', '225 km/h'],
+    landCruiser: ['Toyota Land Cruiser', '4', 'Petrol', 'Toyota', '210 km/h'],
+    nissanPatrol: ['Nissan Patrol', '4', 'Petrol', 'Nissan', '210 km/h'],
+    jeepGrand: ['Jeep Grand Cherokee', '4', 'Petrol', 'Jeep', '210 km/h'],
+    jetour: ['Jetour', '4', 'Petrol', 'Jetour', '185 km/h'],
+    mgG50: ['MG G50', '7', 'Petrol', 'MG', '180 km/h'],
+    fortuner: ['Toyota Fortuner', '4', 'Petrol', 'Toyota', '185 km/h'],
+    tucson: ['Hyundai Tucson', '4', 'Petrol', 'Hyundai', '195 km/h'],
+    newSportage: ['Kia Sportage - New Shape', '4', 'Petrol', 'Kia', '195 km/h'],
+    sportage: ['Kia Sportage - Old Shape', '4', 'Petrol', 'Kia', '190 km/h'],
+    kiaGrand: ['Kia Carnival', '7', 'Petrol', 'Kia', '180 km/h'],
+    tiggo7: ['Chery Tiggo 7', '4', 'Petrol', 'Chery', '190 km/h'],
+    eclipse: ['Mitsubishi Eclipse', '4', 'Petrol', 'Mitsubishi', '200 km/h'],
+    zs: ['MG ZS', '4', 'Petrol', 'MG', '180 km/h'],
+
+    // Sedans
+    mercedesE200: ['Mercedes E200', '4', 'Petrol', 'Mercedes', '240 km/h'],
+    mercedesS500: ['Mercedes S500', '4', 'Petrol', 'Mercedes', '250 km/h'],
     corolla: ['Toyota Corolla', '4', 'Petrol', 'Toyota', '190 km/h'],
     accent: ['Hyundai Accent RB', '4', 'Petrol', 'Hyundai', '190 km/h'],
     mg5: ['MG 5', '4', 'Petrol', 'MG', '185 km/h'],
-    mercedesS: ['Mercedes S-Class', '4', 'Petrol', 'Mercedes', '250 km/h'],
     elantra: ['Hyundai Elantra CN7', '4', 'Petrol', 'Hyundai', '200 km/h'],
     elantraMD: ['Hyundai Elantra MD', '4', 'Petrol', 'Hyundai', '190 km/h'],
-    kiaGrand: ['Kia Grand', '7', 'Diesel', 'Kia', '180 km/h'],
-    sportage: ['Kia Sportage - Old Shape', '4', 'Petrol', 'Kia', '190 km/h'],
-    newSportage: ['Kia Sportage - New Shape', '4', 'Petrol', 'Kia', '195 km/h'],
-    zs: ['MG ZS', '4', 'Petrol', 'MG', '180 km/h'],
-    jeepGrand: ['Jeep Grand Cherokee', '4', 'Petrol', 'Jeep', '210 km/h'],
-    tiggo7: ['Chery Tiggo 7', '4', 'Petrol', 'Chery', '190 km/h'],
-    tucson: ['Hyundai Tucson', '4', 'Petrol', 'Hyundai', '195 km/h'],
-    eclipse: ['Mitsubishi Eclipse', '4', 'Petrol', 'Mitsubishi', '200 km/h'],
-    fortuner: ['Toyota Fortuner', '6', 'Petrol', 'Toyota', '185 km/h'],
-    rangeRover: ['Range Rover', '4', 'Petrol', 'Land Rover', '225 km/h'],
-    jetour: ['Jetour', '4', 'Petrol', 'Jetour', '185 km/h'],
   },
+
   ar: {
-    oldHiace: ['تويوتا هاي إس — الشكل القديم', '14', 'ديزل', 'تويوتا', '120 كم/س'],
-    newHiace: ['تويوتا هاي إس — الشكل الجديد', '12', 'ديزل', 'تويوتا', '130 كم/س'],
+    // الفانات
+    oldHiace: ['تويوتا هاي إس', '14', 'ديزل', 'تويوتا', '120 كم/س'],
+    newHiace: ['تويوتا هاي إس', '13', 'ديزل', 'تويوتا', '130 كم/س'],
     h1: ['هيونداي إتش وان', '8', 'ديزل', 'هيونداي', '160 كم/س'],
+    hyundaiStaria: ['هيونداي ستاريا', '7', 'بنزين', 'هيونداي', '180 كم/س'],
     v300: ['مرسيدس V300', '6', 'بنزين', 'مرسيدس', '210 كم/س'],
-    coaster: ['تويوتا كوستر', '28', 'ديزل', 'تويوتا', '110 كم/س'],
-    mitsubishiBus: ['أتوبيس ميتسوبيشي', '28', 'ديزل', 'ميتسوبيشي', '110 كم/س'],
+
+    // الأتوبيسات
+    coaster: ['تويوتا كوستر', '22', 'ديزل', 'تويوتا', '110 كم/س'],
+    mitsubishiBus: ['ميني باص', '28', 'ديزل', 'ميتسوبيشي', '110 كم/س'],
+    superJet: ['باص مرسيدس', '50', 'ديزل', 'سوبر جيت', '100 كم/س'],
+
+    // سيارات SUV — بالترتيب المطلوب
+    mercedesGLC300: ['مرسيدس GLC 300', '4', 'بنزين', 'مرسيدس', '230 كم/س'],
+    gClass: ['مرسيدس G-Class', '4', 'بنزين', 'مرسيدس', '210 كم/س'],
+    rangeRover: ['رينج روفر', '4', 'بنزين', 'لاند روفر', '225 كم/س'],
+    landCruiser: ['تويوتا لاند كروزر', '4', 'بنزين', 'تويوتا', '210 كم/س'],
+    nissanPatrol: ['نيسان باترول', '4', 'بنزين', 'نيسان', '210 كم/س'],
+    jeepGrand: ['جيب جراند شيروكي', '4', 'بنزين', 'جيب', '210 كم/س'],
+    jetour: ['جيتور', '4', 'بنزين', 'جيتور', '185 كم/س'],
+    mgG50: ['إم جي G50', '7', 'بنزين', 'إم جي', '180 كم/س'],
+    fortuner: ['تويوتا فورتشنر', '4', 'بنزين', 'تويوتا', '185 كم/س'],
+    tucson: ['هيونداي توسان', '4', 'بنزين', 'هيونداي', '195 كم/س'],
+    newSportage: ['كيا سبورتاج — الشكل الجديد', '4', 'بنزين', 'كيا', '195 كم/س'],
+    sportage: ['كيا سبورتاج — الشكل القديم', '4', 'بنزين', 'كيا', '190 كم/س'],
+    kiaGrand: ['كيا كرنفال', '7', 'بنزين', 'كيا', '180 كم/س'],
+    tiggo7: ['شيري تيجو 7', '4', 'بنزين', 'شيري', '190 كم/س'],
+    eclipse: ['ميتسوبيشي إكليبس', '4', 'بنزين', 'ميتسوبيشي', '200 كم/س'],
+    zs: ['إم جي ZS', '4', 'بنزين', 'إم جي', '180 كم/س'],
+
+    // سيارات السيدان
+    mercedesE200: ['مرسيدس E200', '4', 'بنزين', 'مرسيدس', '240 كم/س'],
+    mercedesS500: ['مرسيدس S500', '4', 'بنزين', 'مرسيدس', '250 كم/س'],
     corolla: ['تويوتا كورولا', '4', 'بنزين', 'تويوتا', '190 كم/س'],
     accent: ['هيونداي أكسنت RB', '4', 'بنزين', 'هيونداي', '190 كم/س'],
     mg5: ['إم جي 5', '4', 'بنزين', 'إم جي', '185 كم/س'],
-    mercedesS: ['مرسيدس إس كلاس', '4', 'بنزين', 'مرسيدس', '250 كم/س'],
     elantra: ['هيونداي إلنترا CN7', '4', 'بنزين', 'هيونداي', '200 كم/س'],
     elantraMD: ['هيونداي إلنترا MD', '4', 'بنزين', 'هيونداي', '190 كم/س'],
-    kiaGrand: ['كيا جراند', '7', 'ديزل', 'كيا', '180 كم/س'],
-    sportage: ['كيا سبورتاج - الشكل القديم', '4', 'بنزين', 'كيا', '190 كم/س'],
-    newSportage: ['كيا سبورتاج — الشكل الجديد', '4', 'بنزين', 'كيا', '195 كم/س'],
-    zs: ['إم جي ZS', '4', 'بنزين', 'إم جي', '180 كم/س'],
-    jeepGrand: ['جيب جراند', '4', 'بنزين', 'جيب', '210 كم/س'],
-    tiggo7: ['شيري تيجو 7', '4', 'بنزين', 'شيري', '190 كم/س'],
-    tucson: ['هيونداي توسان', '4', 'بنزين', 'هيونداي', '195 كم/س'],
-    eclipse: ['ميتسوبيشي إكليبس', '4', 'بنزين', 'ميتسوبيشي', '200 كم/س'],
-    fortuner: ['تويوتا فورتشنر', '6', 'بنزين', 'تويوتا', '185 كم/س'],
-    rangeRover: ['رينج روفر', '4', 'بنزين', 'لاند روفر', '225 كم/س'],
-    jetour: ['جيتور', '4', 'بنزين', 'جيتور', '185 كم/س'],
   },
 };
 
@@ -192,6 +246,7 @@ export const destinationCatalog = {
     luxor: ['Luxor', 'The world’s greatest open-air museum, at your pace.', 'Luxor'],
     aswan: ['Aswan', 'A softer rhythm, warmer colours, and the river.', 'Aswan'],
   },
+
   ar: {
     pyramids: ['الأهرامات', 'أفق ذهبي لا يحتاج إلى مقدمة.', 'الجيزة'],
     whiteDesert: ['الحديقة القومية للصحراء البيضاء', 'تكوينات بيضاء وسماء مليئة بالصمت.', 'الفرافرة'],
@@ -220,3 +275,4 @@ export const destinationCatalog = {
     aswan: ['أسوان', 'إيقاع أهدأ وألوان أدفأ والنيل حاضر.', 'أسوان'],
   },
 };
+

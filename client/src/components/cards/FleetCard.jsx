@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import { motion, useReducedMotion } from 'framer-motion';
@@ -13,7 +14,9 @@ export function FleetCard({ itemKey, index }) {
 
   const entry = fleetCatalog[lang]?.[itemKey] || fleetCatalog.en[itemKey] || [];
   const [name, rawSeats, fuel, brand, speed] = entry;
-  const seats = itemKey === 'kiaGrand' ? 4 : rawSeats;
+
+  // Read passenger capacity directly from fleetCatalog
+  const seats = rawSeats;
 
   return (
     <motion.article
@@ -24,7 +27,7 @@ export function FleetCard({ itemKey, index }) {
       transition={{
         duration: 0.45,
         delay: Math.min(index * 0.07, 0.28),
-        ease: [0.22, 1, 0.36, 1],
+        ease: [0.22, 1, 0, 1],
       }}
       whileHover={prefersReducedMotion ? {} : { y: -6 }}
     >

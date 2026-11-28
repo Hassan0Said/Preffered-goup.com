@@ -169,9 +169,9 @@ export function Footer() {
           <div className="footer-contact">
             <h4>{t.connect}</h4>
 
-            <FooterContactLink href="tel:+201000000000" Icon={Phone}>
-              +20 100 000 0000
-            </FooterContactLink>
+          <FooterContactLink href="tel:+201211112423" Icon={Phone}>
+            <span dir="ltr">+20 12 1111 2423</span>
+          </FooterContactLink>
 
             <FooterContactLink href="mailto:hello@preferred.eg" Icon={Mail}>
               hello@preferred.eg
@@ -182,6 +182,13 @@ export function Footer() {
               Icon={MapPin}
             >
               {t.cairo}
+            </FooterContactLink>
+
+            <FooterContactLink
+              href="https://maps.app.goo.gl/q1tLbQ28bJ2UBaNDA"
+              Icon={MapPin}
+            >
+              {t.coast}
             </FooterContactLink>
           </div>
 
@@ -197,29 +204,31 @@ export function Footer() {
               <span className="footer-map-icon">
                 <Compass size={16} />
               </span>
-              <span>{t.cairo}</span>
+              <span>{t.coast}</span>
             </div>
+            <div className="footer-map-frame">
 
-            <a
-              className="footer-map-frame"
-              href="https://www.google.com/maps/search/?api=1&query=Cairo%2C+Egypt"
-              target="_blank"
-              rel="noreferrer"
-              aria-label="Open Cairo on Google Maps"
-            >
               <iframe
-                title="Cairo map"
-                src="https://maps.google.com/maps?q=Cairo%2C%20Egypt&z=11&output=embed"
+                title="coast map"
+                src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d441938.97292930546!2d30.89614398015741!3d30.07561628235549!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1z2KjZhtiy2YrZhtmHINin2K_ZhtmI2YM!5e0!3m2!1sen!2seg!4v1795819068240!5m2!1sen!2seg"
+                style={{ border: 0 }}
+                allowFullScreen
                 loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
+                referrerPolicy="strict-origin-when-cross-origin"
               />
 
-              <span className="footer-map-overlay">
+              <a
+                className="footer-map-overlay"
+                href="https://share.google/beQMyvZI4J9djRBrG"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Open coast on Google Maps"
+              >
                 <MapPinned size={18} />
-                <span>{t.cairo}</span>
+                <span>{t.coast}</span>
                 <ArrowUpRight size={14} />
-              </span>
-            </a>
+              </a>
+            </div>
           </motion.div>
         </div>
 

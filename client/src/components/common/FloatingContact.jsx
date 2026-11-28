@@ -13,31 +13,25 @@ export function FloatingContact() {
     {
       icon: <FaWhatsapp size={20} color="#25D366" aria-hidden="true" />,
       label: t.whatsapp,
-      href: 'https://wa.me/201000000000',
+      href: 'https://wa.me/201211112423',
       className: 'whatsapp',
     },
     {
       icon: <FaFacebookF size={18} color="#1877F2" aria-hidden="true" />,
       label: t.facebook || 'Facebook',
-      href: '#facebook',
+      href: 'https://www.facebook.com/share/19yRLB6tAF/?mibextid=wwXIfr',
       className: 'facebook',
-    },
-    {
-      icon: <MessengerIcon size={20} />,
-      label: t.messenger,
-      href: '#messenger',
-      className: 'messenger',
     },
     {
       icon: <FaInstagram size={20} color="#E4405F" aria-hidden="true" />,
       label: t.instagram,
-      href: '#instagram',
+      href: 'https://www.instagram.com/preferred_group?hvrq=MTAyMnRyZzZ3ZWpkdQ==',
       className: 'instagram',
     },
     {
       icon: <TikTokIcon size={19} />,
       label: t.tiktok,
-      href: '#tiktok',
+      href: 'https://www.tiktok.com/@preferred.group?_r=1&_t=ZS-9BZM5yiBmo4',
       className: 'tiktok',
     },
     {
@@ -49,7 +43,7 @@ export function FloatingContact() {
     {
       icon: <MapPin size={19} color="#EA4335" aria-hidden="true" />,
       label: t.location,
-      href: '#location',
+      href: 'https://www.google.com/maps/search/?api=1&query=30.07561628235549,30.89614398015741',
       className: 'location',
     },
   ];

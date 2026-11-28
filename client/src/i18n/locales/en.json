@@ -60,7 +60,6 @@
   "whatsapp": "WhatsApp",
   "instagram": "Instagram",
   "tiktok": "TikTok",
-  "messenger": "Messenger",
   "facebook": "Facebook",
   "location": "Location",
   "gmail": "Gmail",
@@ -77,10 +76,6 @@
     "/about": "About Us",
     "/contact": "Contact Us"
   },
-  "routeFleet": "/ 01 — FLEET",
-  "routeTrips": "/ 02 — ROUTES",
-  "routeAbout": "/ 03 — ABOUT",
-  "routeContact": "/ 04 — CONTACT",
   "lostRoute": "Preferred / Lost route",
   "signature": "Travel Beyond Limits.",
   "aboutHeadlineBefore": "Good journeys are",
@@ -99,7 +94,8 @@
     "Tourist trip",
     "Corporate movement"
   ],
-  "cairo": "Cairo · Giza · Aswan",
+  "cairo": "Cairo",
+  "coast": "Northern Coast",
   "notFound": "Page not found",
   "notFoundText": "The route you were looking for has taken a different turn.",
   "backHome": "Back to home",

@@ -9,25 +9,52 @@ import { PageIntro } from '../components/common/PageIntro.jsx';
 
 const FLEET_EASE = [0.22, 1, 0.36, 1];
 
-const categories = {
-  all: fullFleetKeys,
-  vans: ['oldHiace', 'newHiace', 'h1', 'v300'],
-  coaches: ['coaster', 'mitsubishiBus'],
-  sedans: ['corolla', 'accent', 'mg5', 'mercedesS', 'elantra', 'elantraMD'],
-  suvs: [
-    'sportage',
-    'newSportage',
-    'kiaGrand',
-    'zs',
-    'jeepGrand',
-    'tiggo7',
-    'tucson',
-    'eclipse',
-    'fortuner',
-    'rangeRover',
-    'jetour',
-  ],
-};
+  const categories = {
+    all: fullFleetKeys,
+
+    vans: [
+      'oldHiace',
+      'newHiace',
+      'h1',
+      'hyundaiStaria',
+      'v300',
+    ],
+
+    coaches: [
+      'coaster',
+      'mitsubishiBus',
+      'superJet',
+    ],
+
+    sedans: [
+      'mercedesE200',
+      'mercedesS500',
+      'corolla',
+      'accent',
+      'mg5',
+      'elantra',
+      'elantraMD',
+    ],
+
+    suvs: [
+      'mercedesGLC300',
+      'gClass',
+      'rangeRover',
+      'landCruiser',
+      'nissanPatrol',
+      'jeepGrand',
+      'mgG50',
+      'jetour',
+      'fortuner',
+      'tucson',
+      'newSportage',
+      'sportage',
+      'kiaGrand',
+      'tiggo7',
+      'eclipse',
+      'zs',
+    ],
+  };
 
 export function Fleet() {
   const { t, lang } = useApp();
